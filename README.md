@@ -13,7 +13,7 @@ Setup on-demand service-broker
 
 ## Backlog
 
-    - [ ] Demo application with [Spring Kafka](http://docs.spring.io/spring-kafka/reference/htmlsingle/)
+    - [ ] Demo application with ([Spring Kafka](http://docs.spring.io/spring-kafka/reference/htmlsingle/))
     - [ ] Recording
     - [x] PCF Dev
     - [x] bosh-lite
