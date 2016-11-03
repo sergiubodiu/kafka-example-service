@@ -1,0 +1,29 @@
+vm_types:
+- name: container
+  cloud_properties: {}
+
+networks:
+- name: kafka
+  type: manual
+  subnets:
+  - range: 10.244.0.0/24
+    gateway: 10.244.0.1
+    az: lite
+    cloud_properties: {}
+
+disk_types:
+- name: ten
+  disk_size: 10_000
+  cloud_properties: {}
+
+azs:
+- name: lite
+  cloud_properties: {}
+
+compilation:
+  workers: 2
+  reuse_compilation_vms: true
+  network: kafka
+  az: lite
+  cloud_properties: {}
+

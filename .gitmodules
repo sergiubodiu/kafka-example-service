@@ -1,0 +1,6 @@
+[submodule "kafka-example-service-release"]
+	path = kafka-example-service-release
+	url = https://github.com/pivotal-cf-experimental/kafka-example-service-release
+[submodule "kafka-example-service-adapter-release"]
+	path = kafka-example-service-adapter-release
+	url = https://github.com/pivotal-cf-experimental/kafka-example-service-adapter-release
