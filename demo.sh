@@ -1,12 +1,13 @@
 
 # Use Your On-Demand Service
 pushd kafka-example-app
-cf push --no-start -b go_buildpack
+cf push --no-start
 cf bind-service kafka-example-app k1
 cf start kafka-example-app
 popd
 
+## Deprecated
 # To write data, run
-curl -XPOST http://kafka-example-app.local.pcfdev.io/queues/my-queue -d SOME-DATA
+curl http://kafka-example-app.local.pcfdev.io/hi/SOME-NAME
 # To read data, run
-curl http://kafka-example-app.local.pcfdev.io/queues/my-queue
+curl http://kafka-example-app.local.pcfdev.io/bye

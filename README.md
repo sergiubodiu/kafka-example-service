@@ -11,9 +11,25 @@ Setup on-demand service-broker
 
     To be continued
 
+## Run demo application
+
+    # Use Your On-Demand Service
+    pushd kafka-example-app
+    mvn clean package -DskipTests
+    cf push --no-start
+    cf bind-service kafka-example-app k1
+    cf start kafka-example-app
+    popd
+
+    ## Deprecated
+    # To write data, run
+    curl http://kafka-example-app.local.pcfdev.io/hi/SOME-NAME
+    # To read data, run
+    curl http://kafka-example-app.local.pcfdev.io/bye
+
 ## Backlog
 
-    - [ ] Demo application with ([Spring Kafka](http://docs.spring.io/spring-kafka/reference/htmlsingle/))
+    - [X] Demo application with ([Spring Kafka](http://docs.spring.io/spring-kafka/reference/htmlsingle/))
     - [ ] Recording
     - [x] PCF Dev
     - [x] bosh-lite
